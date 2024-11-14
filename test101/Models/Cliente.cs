@@ -15,4 +15,6 @@ public partial class Cliente
 
     public byte[]? Pdf { get; set; }
 
+    public string? NroDocumento { get; set; }
+
 }

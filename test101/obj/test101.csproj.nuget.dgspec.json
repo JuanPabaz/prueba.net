@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj": {}
+    "c:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj": {
+    "c:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj",
+        "projectUniqueName": "c:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj",
         "projectName": "test101",
-        "projectPath": "C:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj",
+        "projectPath": "c:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\test101.csproj",
         "packagesPath": "C:\\Users\\Temp Tech\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\obj\\",
+        "outputPath": "c:\\Users\\Temp Tech\\Desktop\\Practica ASP.NET\\test101\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

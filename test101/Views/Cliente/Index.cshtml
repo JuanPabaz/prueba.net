@@ -4,23 +4,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script src="https://cdn.tailwindcss.com"></script>
-<p>
-    <a asp-action="Create" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mt-4">Create New</a>
-</p>
+<div>
+    <a asp-action="Create" class="inline-block mb-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mt-4">Create New</a>
+</div>
 <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
     <thead>
         <tr class="bg-gray-100 border-b border-gray-300">
             <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                @Html.DisplayNameFor(model => model.NombreCliente)
+                Nombre Cliente
             </th>
             <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                @Html.DisplayNameFor(model => model.DireccionCliente)
+                Direccion Cliente
             </th>
             <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                @Html.DisplayNameFor(model => model.FechaRegistro)
+                Fecha Registro
             </th>
             <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                @Html.DisplayNameFor(model => model.Pdf)
+                Documento
+            </th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                PDF
             </th>
             <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider"></th>
         </tr>
@@ -36,6 +39,9 @@
                 </td>
                 <td class="px-6 py-4 text-sm text-gray-900">
                     @Html.DisplayFor(modelItem => item.FechaRegistro)
+                </td>
+                <td class="px-6 py-4 text-sm text-gray-900">
+                    @Html.DisplayFor(modelItem => item.NroDocumento)
                 </td>
                 <td class="px-6 py-4 text-sm text-gray-900">
                     <button id="viewPdfBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mt-4" onclick="mostrarPdf('/Cliente/GetPdf/@item.IdCliente')">Ver PDF</button>

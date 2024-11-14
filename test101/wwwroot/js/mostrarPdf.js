@@ -1,13 +1,13 @@
 async function mostrarPdf() {
     debugger;
     const formData = new FormData(document.getElementById("formPrincipal"));
-    const nombreCliente = formData.get("NombreCliente");
+    const NombreCliente = formData.get("NombreCliente");
     const DireccionCliente = formData.get("DireccionCliente");
-    const DocumentoCliente = "123456789";
+    const NroDocumento = formData.get("NroDocumento");
     const request = {
-        NombreCliente: nombreCliente,
-        DireccionCliente: DireccionCliente,
-        DocumentoCliente: DocumentoCliente
+        NombreCliente,
+        DireccionCliente,
+        NroDocumento
     };
     const response = await fetch('/Cliente/GetPdfContent', {
         method: 'POST',
@@ -56,6 +56,7 @@ async function crearCliente(cliente) {
     const formData = new FormData();
     formData.append("NombreCliente", cliente.NombreCliente);
     formData.append("DireccionCliente", cliente.DireccionCliente);
+    formData.append("NroDocumento", cliente.DocumentoCliente);
     formData.append("__RequestVerificationToken",document.querySelector('input[name="__RequestVerificationToken"]').value);
     formData.append("Pdf", cliente.Pdf);
 

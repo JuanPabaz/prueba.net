@@ -55,7 +55,7 @@ namespace test101.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdCliente,NombreCliente,DireccionCliente,FechaRegistro,Pdf")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("IdCliente,NombreCliente,DireccionCliente,NroDocumento,FechaRegistro,Pdf")] Cliente cliente)
         {
             
             if (ModelState.IsValid)
@@ -164,7 +164,7 @@ namespace test101.Controllers
             var requestData = new
             {
                 NombreCompleto = cliente.NombreCliente,
-                NumeroDocumento = "123456789",
+                NumeroDocumento = cliente.NroDocumento,
                 Direccion = cliente.DireccionCliente
             };
             using (var client = new HttpClient())

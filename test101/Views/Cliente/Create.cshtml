@@ -13,31 +13,30 @@
                     <div asp-validation-summary="ModelOnly" class="text-red-500 mb-4"></div>
                     
                     <div class="mb-4">
-                        <label asp-for="NombreCliente" class="block text-gray-700 font-bold mb-2"></label>
+                        <label asp-for="NombreCliente" class="block text-gray-700 font-bold mb-2 uppercase">Nombre Cliente</label>
                         <input asp-for="NombreCliente" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" id="NombreCliente" />
                         <span asp-validation-for="NombreCliente" class="text-red-500 text-sm mt-1"></span>
                     </div>
                     
                     <div class="mb-4">
-                        <label asp-for="DireccionCliente" class="block text-gray-700 font-bold mb-2"></label>
+                        <label asp-for="DireccionCliente" class="block text-gray-700 font-bold mb-2 uppercase">Direccion Cliente</label>
                         <input asp-for="DireccionCliente" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" id="DireccionCliente" />
                         <span asp-validation-for="DireccionCliente" class="text-red-500 text-sm mt-1"></span>
                     </div>
-                    
+
                     <div class="mb-4">
-                        <label asp-for="Pdf" class="block text-gray-700 font-bold mb-2"></label>
-                        <input asp-for="Pdf" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" id="Pdf" />
-                        <span asp-validation-for="Pdf" class="text-red-500 text-sm mt-1"></span>
+                        <label asp-for="NroDocumento" class="block text-gray-700 font-bold mb-2 uppercase">Numero documento</label>
+                        <input asp-for="NroDocumento" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" id="NroDocumento" />
+                        <span asp-validation-for="NroDocumento" class="text-red-500 text-sm mt-1"></span>
                     </div>
                     
-                    <div class="flex items-center justify-between">
-                        <input type="submit" value="Create" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <div class="flex items-center justify-between w-full">
+                        <button id="viewPdfBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mt-4 w-full">Crear cliente</button>
                     </div>
                 </form>
                 <div class="text-center mt-4">
                     <a asp-action="Index" class="text-blue-500 hover:text-blue-700">Back to List</a>
                 </div>
-                <button id="viewPdfBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mt-4" onclick="mostrarPdf()">Ver PDF</button>
             </div>
         </div>
     </div>

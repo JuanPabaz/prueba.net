@@ -43,6 +43,10 @@ public partial class Test101Context : DbContext
                 .HasMaxLength(30)
                 .IsUnicode(false)
                 .HasColumnName("nombre_cliente");
+            entity.Property(e => e.NroDocumento)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("nro_documento");
             entity.Property(e => e.Pdf).HasColumnName("pdf");
         });
 
