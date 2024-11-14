@@ -47,7 +47,7 @@
                     @Html.DisplayFor(modelItem => item.FechaRegistro)
                 </td>
                 <td class="px-6 py-4 text-sm text-gray-900">
-                    @Html.DisplayFor(modelItem => item.Pdf)
+                    <button id="viewPdfBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mt-4" onclick="mostrarPdf('/Cliente/GetPdf/@item.IdCliente')">Ver PDF</button>
                 </td>
                 <td class="px-6 py-4 text-sm text-gray-500">
                     <a asp-action="Edit" asp-route-id="@item.IdCliente" class="text-blue-600 hover:text-blue-800 underline">Edit</a> |
@@ -58,5 +58,15 @@
         }
     </tbody>
 </table>
+    <div id="pdfModal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded shadow-lg max-w-2xl w-full">
+            <h2 class="text-2xl font-semibold mb-4">PDF Documento</h2>
+            <div class="overflow-auto max-h-[80vh]">
+                <embed id="pdfEmbed" src="" class="w-full h-[70vh]" />
+            </div>
+            <button id="closeModalBtn" class="mt-4 bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+    <script src="~/js/mostrarPdfIndex.js" asp-append-version="true"></script>
 </body>
 </html>

@@ -186,5 +186,19 @@ namespace test101.Controllers
                 }
             }
         }
+
+        [HttpGet]
+        public IActionResult GetPdf(decimal id)
+        {
+            var cliente = _context.Clientes.Find(id);
+            if (cliente == null || cliente.Pdf == null)
+            {
+                return NotFound();
+            }
+
+            return File(cliente.Pdf, "application/pdf");
+        }
     }
+
+    
 }
