@@ -1,51 +1,45 @@
 @model test101.Models.Cliente
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-
+<script src="https://cdn.tailwindcss.com"></script>
 <div>
-    <h4>Cliente</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreCliente)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NombreCliente)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DireccionCliente)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DireccionCliente)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaRegistro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaRegistro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Pdf)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Pdf)
-        </dd>
+    <h4 class="text-lg font-medium">Cliente</h4>
+    <hr class="my-4" />
+    <dl class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <dt class="font-semibold">Nombre Cliente</dt>
+        <dd class="text-gray-700">@Model.IdCliente.ToString("0")</dd>
+
+        <dt class="font-semibold">Nombre Cliente</dt>
+        <dd class="text-gray-700">@Html.DisplayFor(model => model.NombreCliente)</dd>
+
+        <dt class="font-semibold">Dirección Cliente</dt>
+        <dd class="text-gray-700">@Html.DisplayFor(model => model.DireccionCliente)</dd>
+
+        <dt class="font-semibold">Fecha Registro</dt>
+        <dd class="text-gray-700">@Html.DisplayFor(model => model.FechaRegistro)</dd>
+
+        <dt class="font-semibold">PDF</dt>
+        <button id="viewPdfBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mt-4" onclick="mostrarPdf('/Cliente/GetPdf/@Model.IdCliente')">Ver PDF</button>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdCliente">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model?.IdCliente" class="text-blue-600 hover:underline">Edit</a> |
+    <a asp-action="Index" class="text-blue-600 hover:underline">Back to List</a>
 </div>
-</body>
-</html>
+
+    <div id="pdfModal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded shadow-lg max-w-2xl w-full">
+            <h2 class="text-2xl font-semibold mb-4">PDF Documento</h2>
+            <div class="overflow-auto max-h-[80vh]">
+                <embed id="pdfEmbed" src="" class="w-full h-[70vh]" />
+            </div>
+            <button id="closeModalBtn" class="mt-4 bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+
+<script src="~/js/mostrarPdfIndex.js" asp-append-version="true"></script>
+
+

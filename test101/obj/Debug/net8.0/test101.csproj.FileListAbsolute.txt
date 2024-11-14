@@ -551,3 +551,4 @@ C:\Users\jpgth\OneDrive\Escritorio\Prueba ASP.NET\prueba.net\test101\obj\Debug\n
 C:\Users\jpgth\OneDrive\Escritorio\Prueba ASP.NET\prueba.net\test101\obj\Debug\net8.0\test101.pdb
 C:\Users\jpgth\OneDrive\Escritorio\Prueba ASP.NET\prueba.net\test101\obj\Debug\net8.0\test101.genruntimeconfig.cache
 C:\Users\jpgth\OneDrive\Escritorio\Prueba ASP.NET\prueba.net\test101\obj\Debug\net8.0\ref\test101.dll
+C:\Users\Temp Tech\Desktop\Practica ASP.NET\test101\obj\Debug\net8.0\test101.sourcelink.json

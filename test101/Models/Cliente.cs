@@ -14,4 +14,5 @@ public partial class Cliente
     public DateOnly? FechaRegistro { get; set; }
 
     public byte[]? Pdf { get; set; }
+
 }
