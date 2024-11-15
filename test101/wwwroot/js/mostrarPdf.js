@@ -52,13 +52,14 @@ function base64ToBlob(base64, mimeType) {
 }
 
 async function crearCliente(cliente) {
-    // Crea un objeto FormData y añade los datos del cliente
     const formData = new FormData();
     formData.append("NombreCliente", cliente.NombreCliente);
     formData.append("DireccionCliente", cliente.DireccionCliente);
-    formData.append("NroDocumento", cliente.DocumentoCliente);
+    formData.append("NroDocumento", cliente.NroDocumento);
     formData.append("__RequestVerificationToken",document.querySelector('input[name="__RequestVerificationToken"]').value);
     formData.append("Pdf", cliente.Pdf);
+
+    Array.from(formData.entries());
 
     try {
         const response = await fetch('/Cliente/Create', {

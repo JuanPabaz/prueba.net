@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj": {}
+    "c:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj": {
+    "c:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj",
+        "projectUniqueName": "c:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj",
         "projectName": "test101",
-        "projectPath": "C:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj",
+        "projectPath": "c:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\test101.csproj",
         "packagesPath": "C:\\Users\\jpgth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\obj\\",
+        "outputPath": "c:\\Users\\jpgth\\OneDrive\\Escritorio\\Prueba ASP.NET\\prueba.net\\test101\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jpgth\\AppData\\Roaming\\NuGet\\NuGet.Config"
