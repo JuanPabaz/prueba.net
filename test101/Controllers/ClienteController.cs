@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using test101.Models;
 
@@ -57,11 +58,18 @@ namespace test101.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdCliente,NombreCliente,DireccionCliente,NroDocumento,FechaRegistro,Pdf")] Cliente cliente)
         {
-            
             if (ModelState.IsValid)
             {
-                _context.Add(cliente);
-                await _context.SaveChangesAsync();
+                var sql = "EXEC InsertarCliente @NombreCliente, @DireccionCliente, @Pdf, @NroDocumento";
+                var parameters = new[]
+                {
+                    new SqlParameter("@NombreCliente", cliente.NombreCliente ?? (object)DBNull.Value),
+                    new SqlParameter("@DireccionCliente", cliente.DireccionCliente ?? (object)DBNull.Value),
+                    new SqlParameter("@Pdf", cliente.Pdf ?? (object)DBNull.Value),
+                    new SqlParameter("@NroDocumento", cliente.NroDocumento ?? (object)DBNull.Value)
+                };
+
+                await _context.Database.ExecuteSqlRawAsync(sql, parameters);
                 return RedirectToAction(nameof(Index));
             }
             return View(cliente);
